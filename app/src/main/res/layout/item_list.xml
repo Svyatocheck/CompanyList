@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/personItem"
     android:layout_width="wrap_content"
     android:layout_height="100dp"
@@ -121,7 +120,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
@@ -133,23 +132,23 @@
                 <ImageView
                     android:id="@+id/removeItem"
                     android:layout_width="30dp"
-                    android:clickable="true"
-                    android:focusable="true"
                     android:layout_height="30dp"
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="8dp"
                     android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:srcCompat="@drawable/delete" />
 
                 <ImageView
                     android:id="@+id/editItem"
                     android:layout_width="36dp"
-                    android:clickable="true"
-                    android:focusable="true"
                     android:layout_height="36dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:srcCompat="@drawable/edit" />
             </LinearLayout>
 

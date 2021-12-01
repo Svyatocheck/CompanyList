@@ -9,67 +9,207 @@
     android:gravity="center"
     android:onClick="hideKeyboard"
     android:orientation="vertical"
+    android:paddingEnd="4dp"
     tools:context=".View.EditPage">
 
-    <EditText
-        android:id="@+id/compName"
-        android:layout_width="325dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/shape"
-        android:editable="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="ФИО" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="45dp"
-        android:background="@drawable/shape">
-
-        <CheckBox
-            android:id="@+id/maleCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checker"
-            android:text="Male" />
-
-        <CheckBox
-            android:id="@+id/femaleCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checker"
-            android:text="Female" />
-    </com.google.android.material.chip.ChipGroup>
-
-    <Spinner
-        android:id="@+id/ideList"
-        android:layout_width="325dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/shape" />
-
-    <Spinner
-        android:id="@+id/langList"
-        android:layout_width="325dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/shape" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="167dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/removeItemCompany"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/minus" />
+
+            <ImageView
+                android:id="@+id/editItemCompany"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/edit" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/compName"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/shape"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/addItemCompany"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/plus" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/removeItemFounder"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/minus" />
+
+            <ImageView
+                android:id="@+id/editItemFounder"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/edit" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/founder"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/shape" />
+
+        <ImageView
+            android:id="@+id/addItemFounder"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/plus" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/removeItemProduct"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/minus" />
+
+            <ImageView
+                android:id="@+id/editItemProduct"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/edit" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/product"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/shape"
+            android:gravity="top"
+            android:nestedScrollingEnabled="false" />
+
+        <ImageView
+            android:id="@+id/addItemProduct"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/plus" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
         android:gravity="center|top">
 
         <Button
